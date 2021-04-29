@@ -1,6 +1,6 @@
 {
     "name": "zolf-backend",
-    "version": "0.0.1-alpha",
+    "version": "0.0.1",
     "description": "Monorepo Microservices for Zolf",
     "author": "Ali Havasi",
     "private": true,
