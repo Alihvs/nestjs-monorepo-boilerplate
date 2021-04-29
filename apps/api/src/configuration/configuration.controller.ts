@@ -1,11 +1,9 @@
-import { Controller, Get, UseInterceptors } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
-import { SentryInterceptor } from '@shared/sentry/sentry.interceptor';
 import { ConfigurationService } from './configuration.service';
 
 @ApiTags('Configuration')
 @Controller()
-@UseInterceptors(SentryInterceptor)
 export class ConfigurationController {
     constructor(private readonly configurationService: ConfigurationService) {}
 
