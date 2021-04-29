@@ -1,0 +1,9 @@
+{
+    "singleQuote": true,
+    "trailingComma": "none",
+    "tabWidth": 4,
+    "jsxSingleQuote": true,
+    "bracketSpacing": true,
+    "eslintIntegration": true,
+    "printWidth": 100
+}
