@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
-import { ApiOperation, ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { CreateCustomerDto } from 'components/customer/customer.dto';
-import { CustomerService } from 'components/customer/customer.service';
+import { ApiOperation, ApiParam, ApiTags } from '@nestjs/swagger';
+import { CustomerService } from '@lib/customer/customer.service';
+import { CreateCustomerDto } from '@lib/customer/dto/customer.dto';
 
 @ApiTags('API: Customer')
 @Controller()

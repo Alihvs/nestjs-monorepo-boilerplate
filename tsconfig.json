@@ -14,7 +14,8 @@
         "resolveJsonModule": true,
         "paths": {
             "@shared/*": ["shared/*"],
-            "@components/*": ["components/*"]
+            "@lib/customer": ["libs/customer/src"],
+            "@lib/customer/*": ["libs/customer/src/*"]
         }
     }
 }

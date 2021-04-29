@@ -104,12 +104,14 @@
         "coverageDirectory": "./coverage",
         "testEnvironment": "node",
         "roots": [
-            "<rootDir>/apps/"
+            "<rootDir>/apps/",
+            "<rootDir>/libs/"
         ],
         "moduleNameMapper": {
             "@shared/(.*)": "<rootDir>/shared/$1",
-            "@components/(.*)": "<rootDir>/components/$1",
-            "apps/(.*)": "<rootDir>/apps/$1"
+            "apps/(.*)": "<rootDir>/apps/$1",
+            "@lib/customer/(.*)": "<rootDir>/libs/customer/src/$1",
+            "@lib/customer": "<rootDir>/libs/customer/src"
         }
     }
 }

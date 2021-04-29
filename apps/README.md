@@ -1,0 +1,1 @@
+These are microservices. None of these apps should be allowed to import services or functions from each other. Instead, if a service needs to be shared between several microservices, it should be either a library or in the shared folder.

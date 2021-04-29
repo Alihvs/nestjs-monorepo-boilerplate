@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { CreateCustomerDto } from './customer.dto';
-import { ICustomer } from './customer.interface';
+import { CreateCustomerDto } from './dto/customer.dto';
+import { ICustomer } from './interface/customer.interface';
 @Injectable()
 export class CustomerService {
     constructor(@InjectModel('Customer') readonly customerModel: Model<ICustomer>) {}
