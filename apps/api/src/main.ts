@@ -1,7 +1,7 @@
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { TransformInterceptor } from '@shared/pipe/pipe.global-interceptor';
+// import { TransformInterceptor } from '@shared/pipe/pipe.global-interceptor';
 import * as helmet from 'helmet';
 import * as Swagger from 'swagger-ui-express';
 import { AppModule } from './app.module';
@@ -15,13 +15,15 @@ async function bootstrap() {
     const port = configService.get<number>('API_PORT', 3002);
     const host = configService.get<string>('HOST', 'localhost');
 
-    app.useGlobalInterceptors(new TransformInterceptor());
+    // app.useGlobalInterceptors(new TransformInterceptor());
     app.use(helmet());
     app.enableCors();
 
     const options = new DocumentBuilder()
         .setTitle('API Documentation')
-        .setDescription('The backend API.')
+        .setDescription(
+            'The Public API. This microservice will be exposed on the internet to be consumed by the frontend.'
+        )
         .setVersion(version)
         .addBearerAuth({ type: 'http', in: 'header', scheme: 'Bearer' }, 'access_token')
         .build();

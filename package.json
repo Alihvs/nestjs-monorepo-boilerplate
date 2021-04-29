@@ -108,6 +108,7 @@
         ],
         "moduleNameMapper": {
             "@shared/(.*)": "<rootDir>/shared/$1",
+            "@components/(.*)": "<rootDir>/components/$1",
             "apps/(.*)": "<rootDir>/apps/$1"
         }
     }

@@ -1,8 +1,8 @@
 import { Controller, Get } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
-import { ConfigurationService } from './configuration.service';
+import { ConfigurationService } from '../configuration/configuration.service';
 
-@ApiTags('Configuration')
+@ApiTags('API: Configuration')
 @Controller()
 export class ConfigurationController {
     constructor(private readonly configurationService: ConfigurationService) {}
