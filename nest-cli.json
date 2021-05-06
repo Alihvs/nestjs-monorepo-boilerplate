@@ -25,6 +25,15 @@
       "compilerOptions": {
         "tsConfigPath": "libs/customer/tsconfig.lib.json"
       }
+    },
+    "otp": {
+      "type": "library",
+      "root": "libs/otp",
+      "entryFile": "index",
+      "sourceRoot": "libs/otp/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/otp/tsconfig.lib.json"
+      }
     }
   }
 }

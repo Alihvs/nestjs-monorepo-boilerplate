@@ -36,6 +36,7 @@
         "@nestjs/platform-express": "^7.0.3",
         "@nestjs/swagger": "^4.5.3",
         "@nestjs/terminus": "^7.0.0",
+        "agenda": "^4.1.2",
         "bcrypt": "^5.0.0",
         "chalk": "^4.1.0",
         "dotenv": "^8.2.0",
@@ -109,9 +110,8 @@
         ],
         "moduleNameMapper": {
             "@shared/(.*)": "<rootDir>/shared/$1",
-            "apps/(.*)": "<rootDir>/apps/$1",
-            "@lib/customer/(.*)": "<rootDir>/libs/customer/src/$1",
-            "@lib/customer": "<rootDir>/libs/customer/src"
+            "@components/(.*)": "<rootDir>/components/$1",
+            "apps/(.*)": "<rootDir>/apps/$1"
         }
     }
 }

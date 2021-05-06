@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { CreateCustomerDto } from './dto/customer.dto';
-import { ICustomer } from './interface/customer.interface';
+import { CreateCustomerDTO } from './customer.dto';
+import { ICustomer } from './customer.interface';
 @Injectable()
 export class CustomerService {
     constructor(@InjectModel('Customer') readonly customerModel: Model<ICustomer>) {}
@@ -11,7 +11,9 @@ export class CustomerService {
         return await this.customerModel.findById(id);
     }
 
-    async createTestUser(customer: CreateCustomerDto): Promise<ICustomer> {
-        return this.customerModel.create(customer);
+    async createOrGetCustomer(phoneNumber: string): Promise<ICustomer> {
+        const customer = await this.customerModel.findOne({ phoneNumber });
+        if (customer) return customer;
+        return this.customerModel.create({ phoneNumber });
     }
 }

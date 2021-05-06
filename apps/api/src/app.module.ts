@@ -6,10 +6,11 @@ import { AppService } from './app.service';
 import { HealthController } from './health/health.controller';
 import { ConfigurationModule } from './configuration/configuration.module';
 import { DatabaseModule } from '@shared/database/database.module';
-import { CustomerModule } from '@lib/customer';
 import { CustomerController } from './controllers/customer.controller';
 import { ConfigurationController } from './controllers/configuration.controller';
-// import { RedisModule } from '@shared/redis/redis.module';
+import { OtpController } from './controllers/otp.controller';
+import { CustomerModule } from '@components/customer/customer.module';
+import { OtpModule } from '@components/otp/otp.module';
 
 @Module({
     imports: [
@@ -17,10 +18,16 @@ import { ConfigurationController } from './controllers/configuration.controller'
         ConfigurationModule,
         TerminusModule,
         DatabaseModule,
-        CustomerModule
-        // RedisModule
+        CustomerModule,
+        OtpModule
     ],
-    controllers: [AppController, HealthController, CustomerController, ConfigurationController],
+    controllers: [
+        AppController,
+        HealthController,
+        CustomerController,
+        ConfigurationController,
+        OtpController
+    ],
     providers: [AppService]
 })
 export class AppModule {}

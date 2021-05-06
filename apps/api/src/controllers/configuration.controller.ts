@@ -7,7 +7,7 @@ import { ConfigurationService } from '../configuration/configuration.service';
 export class ConfigurationController {
     constructor(private readonly configurationService: ConfigurationService) {}
 
-    @Get('/api/v1/configuration')
+    @Get('v1/configuration')
     @ApiOperation({
         summary: 'Returns the general configuration of the app.'
     })
